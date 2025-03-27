@@ -1,0 +1,110 @@
+:root {
+  --primary-color: #4A90E2;    /* Azul vibrante */
+  --secondary-color: #7ED321;  /* Verde menta */
+  --accent-color: #F5A623;     /* Naranja cálido */
+  --light-color: #FFFFFF;      /* Blanco */
+  --text-color: #333333;       /* Texto oscuro */
+  --bg-gradient: linear-gradient(135deg, #E9F5FF, #FDFBFB); /* Fondo suave */
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--bg-gradient);
+}
+
+.loginForm {
+  background: var(--light-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+.input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--accent-color);
+}
+.input:hover {
+  transform: scale(1.03);
+}
+
+.button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:  0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.03);
+}
+
+.registerText {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.registerText a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.registerText a:hover {
+  text-decoration: underline;
+}
+
+/* ... estilos anteriores ... */
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+}
+
+.forgotPassword {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}

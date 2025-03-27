@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --font-outfit: 'Outfit', sans-serif; /* Define una variable para la fuente */
+}
+
+body {
+  font-family: var(--font-outfit);
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}

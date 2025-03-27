@@ -1,0 +1,134 @@
+:root {
+  --header-height: 3.5rem;
+  --first-color: hsl(220, 68%, 54%); /* Azul principal */
+  --first-color-lighten: hsl(220, 68%, 97%); /* Azul claro */
+  --title-color: hsl(220, 48%, 28%); /* Color de títulos */
+  --text-color: hsl(220, 12%, 45%); /* Color de texto */
+  --body-color: hsl(220, 100%, 99%); /* Fondo blanco */
+  --body-font: "Poppins", sans-serif;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+/*=============== NAVBAR ===============*/
+.navbar {
+
+  width: 100%;
+  margin: 10px 0;
+  height: var(--header-height);
+  background-color: var(--body-color); /* Fondo blanco */
+  box-shadow: 0 2px 8px hsla(220, 68%, 12%, 0.15); /* Sombra suave */
+  z-index: var(--z-fixed);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+/* Logo */
+.navbar__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  transition: color 0.3s;
+}
+
+.navbar__logo img {
+  height: 40px; /* Tamaño del logo */
+  width: auto;
+}
+
+.navbar__logo:hover {
+  color: var(--first-color);
+}
+
+/* Enlaces de navegación */
+.navbar__links {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.navbar__links a {
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: 0.3s ;
+}
+
+.navbar__links a:hover {
+  transform: scale(1.01);
+}
+
+/* Botón de salir */
+.navbar__logout {
+
+  border: none;
+  font-weight: var(--font-semi-bold);
+  font-size: var(--normal-font-size);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar__logout:hover {
+  transform: scale(1.04);
+}
+
+/* Menú hamburguesa (solo en móviles) */
+.navbar__toggle {
+  display: none; /* Oculta en desktop */
+  background: none;
+  border: none;
+  color: var(--title-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Estilos para móviles */
+@media screen and (max-width: 768px) {
+  .navbar__toggle {
+    display: block; /* Muestra en móviles */
+  }
+
+  .navbar__links {
+    display: none; /* Oculta los enlaces en móviles */
+    flex-direction: column;
+    border-radius: 5px;
+    position: absolute;
+    top: var(--header-height);
+    right: 25px;
+    top: 75px;
+    width: 25%;
+    background-color: var(--body-color);
+    padding: 1rem;
+    border: 2px ;
+    box-shadow: 0 2px 8px hsla(220, 68%, 12%, 0.1);
+  }
+
+  .navbar__links.open {
+    display: flex; /* Muestra los enlaces cuando el menú está abierto */
+  }
+}

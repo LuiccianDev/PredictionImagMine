@@ -1,0 +1,86 @@
+:root {
+  --primary-color: #4A90E2;    /* Azul vibrante */
+  --secondary-color: #7ED321;  /* Verde menta */
+  --accent-color: #F5A623;     /* Naranja cálido */
+  --light-color: #FFFFFF;      /* Blanco */
+  --text-color: #333333;       /* Texto oscuro */
+  --bg-gradient: linear-gradient(135deg, #E9F5FF, #FDFBFB); /* Fondo muy suave */
+}
+
+.profileContainer {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background-color: #fff;
+  }
+  .profileContainer h1 {
+    text-align: center;
+  }
+  .profileForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .profileForm label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .profileForm input {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+  }
+  
+  .profileForm button {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .profileForm button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .profileDetails {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 1rem;
+  }
+  
+  .profileDetails button {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .profileDetails button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .message {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+  }
+  
+  .success {
+    background-color: #d1fae5;
+    color: #059669;
+  }
+  
+  .error {
+    background-color: #fee2e2;
+    color: #dc2626;
+  }
