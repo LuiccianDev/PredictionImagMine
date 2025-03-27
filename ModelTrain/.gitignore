@@ -1,0 +1,40 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build files
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python cache files
+__pycache__/
+
+# Modeltrain files
+Modeltrain/
+*.h5
+*.pkl
+*.joblib
+*.csv
+*.json
+*.txt

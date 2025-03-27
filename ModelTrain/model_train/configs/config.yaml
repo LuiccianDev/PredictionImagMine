@@ -1,0 +1,19 @@
+image_size: [128, 128]
+
+valid_classes : ["biotite","bornite", "quartz", "chrysocolla", "pyrite", "malachite","muscovite"] 
+# Tipo clasidicaion 'svm' o 'random_forest
+classifier_type: "svm"
+
+hog:
+  orientations: 9
+  pixels_per_cell: [8, 8]
+  cells_per_block: [2, 2]
+
+paths:
+  input_data_set_dir: "dataset/input_data"
+  output_data_set_dir: "dataset/output_data"
+  metrics_dir: "result"
+  model_save_path: "models/modelo_minerales.joblib"
+  model_path: "models/modelo_minerales.joblib"
+
+random_state: 42
