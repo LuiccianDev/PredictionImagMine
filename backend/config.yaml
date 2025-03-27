@@ -1,0 +1,71 @@
+# Configuración general
+secret_key: "mi_secreto_super_seguro"
+database_type: "postgres"    # Opciones: "sqlite", "mysql", "postgres"
+debug: true
+host: "localhost"             # Dirección en la que Flask escuchará (localhost o 0.0.0.0 para exponerlo en red)
+port: 5000                  # Puerto en el que correrá Flask
+
+# Parámetros para SQLite
+sqlite_db: "app.db"
+
+# Parámetros para MySQL
+mysql:
+  user: "root"
+  password: "root"
+  host: "localhost"
+  port: 3306
+  dbname: "app_db"
+  charset: "utf8mb4"        # Codificación recomendada
+  pool_size: 5              # Tamaño del pool de conexiones
+  pool_recycle: 1800        # Tiempo en segundos para reciclar conexiones
+
+# Parámetros para PostgreSQL
+postgres:
+  user: "postgres"
+  password: "root"
+  host: "localhost"
+  port: 5432
+  dbname: "app_db"
+  sslmode: "prefer"         # Configuración SSL (disable, allow, prefer, require, verify-ca, verify-full)
+  pool_size: 5              # Tamaño del pool de conexiones
+  pool_timeout: 30          # Tiempo máximo de espera para una conexión
+
+# Configuración de logging
+logging:
+  level: "INFO"             # Nivel de log (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  file: "logs/backend.log"      # Archivo donde se guardarán los logs
+
+# Configuración de CORS (Cross-Origin Resource Sharing)
+cors:
+  enabled: true
+  origins: ["*"]            # Permitir todas las fuentes (modificar según sea necesario)
+
+# Configuración de seguridad
+security:
+  access_token_expiration: 3600  # Expiración del token de autenticación en segundos
+  refresh_token_expiration: 86400 # Expiración del refresh token en segundos
+  hashing_algorithm: "HS256"      # Algoritmo de encriptación para JWT
+
+# Configuración de subida de archivos
+upload:
+  allowed_extensions: ["png", "jpg", "jpeg"]  # Tipos de archivos permitidos
+  max_size: 5  # Tamaño máximo en MB
+  upload_folder: "uploads"  # Carpeta donde se guardarán los archivos subidos
+
+# Configuración de la API de inferencia
+inference:
+  model_path: "models/modelo_minerales.joblib"   # Ruta al modelo de clasificación
+  batch_size: 32                   # Tamaño del batch para inferencia
+  image_size: [128, 128]           # Tamaño de las imágenes para preprocesamiento
+
+
+
+
+valid_classes : ["biotite","bornite", "quartz", "chrysocolla", "pyrite", "malachite","muscovite"] 
+# Tipo clasidicaion 'svm' o 'random_forest
+classifier_type: "svm"
+
+hog:
+  orientations: 9
+  pixels_per_cell: [8, 8]
+  cells_per_block: [2, 2]
