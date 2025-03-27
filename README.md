@@ -4,6 +4,8 @@
 
 Este proyecto es una aplicación completa para la identificación de minerales mediante un modelo de clasificación entrenado. Incluye un backend desarrollado en Flask, un frontend en React, y un módulo para el entrenamiento del modelo.
 
+url dataset: [Minerals Identification Dataset](https://www.kaggle.com/datasets/asiedubrempong/minerals-identification-dataset)
+
 ---
 
 ## Estructura del Proyecto
